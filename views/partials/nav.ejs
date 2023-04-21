@@ -6,8 +6,18 @@
   <nav>
     <div>Picture Pls</div>
     <div id="nav-buttons">
-      <div>hello</div>
-      <div>suy</div>
+      <a 
+      href="???" class=<%= title === '????' ? 'active' : '' %>
+      >GUESS
+      </a>
+      <a 
+      href="/words/new" class=<%= title === 'Add Word' ? 'active' : '' %>
+      >ADD WORD
+      </a>
+      <a 
+      href="/words/index" class=<%= title === 'My Words' ? 'active' : '' %>
+      >MY WORDS
+      </a>
       <% if (user) { %>
         <a href="/auth/logout" class="right">
           <button type="submit">Logout</button>

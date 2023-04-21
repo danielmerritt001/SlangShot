@@ -1,5 +1,14 @@
-<%- include('./partials/html-head') %>
+<%- include('../partials/html-head') %>
 
-<%- include('./partials/nav') %>
+<%- include('../partials/nav') %>
 
-<%- include('./partials/footer') %>
+<section>
+  <h1>WORDS UP</h1>
+    <% words.forEach(word => { %>
+      <li><%= word.slang %></a>
+      </li>
+    <% }) %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>
