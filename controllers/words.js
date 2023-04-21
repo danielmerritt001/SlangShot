@@ -34,6 +34,27 @@ function create(req, res) {
   })
 }
 
+function edit(req, res) {
+  Word.findById(req.params.wordId)
+  .then(word => {
+    res.render('words/edit', {
+      word,
+      title: "Edit Slang"
+    })
+  })
+}
+
+function update(req, res) {
+  Word.findByIdAndUpdate(req.params.wordId, req.body, {new: true})
+  .then(word => {
+    res.redirect(`/words/${word._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 function deleteWord(req, res) {
   Word.findByIdAndDelete(req.params.wordId)
   .then(word => {
@@ -102,8 +123,10 @@ export {
   newWord as new,
   index,
   create,
+  edit,
   show,
   deleteWord as delete,
   createComment,
   deleteComment,
+  update,
 }
