@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 const profileSchema = new Schema({
   name: String,
   avatar: String,
+  guessed: { type: Schema.Types.ObjectId, ref: 'Word' },
 }, {
   timestamps: true
 })
