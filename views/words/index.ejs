@@ -5,8 +5,12 @@
 <section>
   <h1>WORDS UP</h1>
     <% words.forEach(word => { %>
-      <li><%= word.slang %></a>
+      <li><a href="/words/<%= word._id %>"><%= word.slang %></a>
       </li>
+      <div><%= word.definitions[0] %></div>
+      <div><%= word.definitions[1] %></div>
+      <div><%= word.definitions[2] %></div>
+      <div><%= word.definitions[3] %></div>
     <% }) %>
   </ul>
 </section>

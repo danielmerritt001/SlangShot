@@ -5,7 +5,12 @@ import { isLoggedIn } from '../middleware/middleware.js'
 const router = Router()
 
 router.get('/new', isLoggedIn, wordsCtrl.new)
-router.get('/index', isLoggedIn, wordsCtrl.index)
+router.get('/', isLoggedIn, wordsCtrl.index)
+router.get('/:wordId', isLoggedIn, wordsCtrl.show)
+router.post('/', isLoggedIn, wordsCtrl.create)
+router.post('/:wordId/comments', isLoggedIn, wordsCtrl.createComment)
+router.delete('/:wordId', isLoggedIn, wordsCtrl.delete)
+router.delete('/:wordId/comments/:commentId', isLoggedIn, wordsCtrl.deleteComment)
 
 export {
   router

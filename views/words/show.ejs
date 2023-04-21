@@ -2,4 +2,69 @@
 
 <%- include('../partials/nav') %>
 
+<section>
+  <% if (word.owner.equals(user?.profile._id)) { %>
+    <a href="/words/<%= word._id %>/edit">
+      <button class="btn">Edit the Slang</button>
+    </a>
+    <form action="/words/<%= word._id %>?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Delete the Slang</button>
+    </form>
+  <% } %>
+  <p><%= word.owner.name %> wants to know if you heard of...</p>
+  <h1><%= word.slang %></h1>
+  <table>
+    <tr>
+      <td><%= word.definitions[0] %></td>
+      <td><%= word.definitions[1] %></td>
+    </tr>
+    <tr>
+      <td><%= word.definitions[2] %></td>
+      <td><%= word.definitions[3] %></td>
+    </tr>
+  </table>
+  <% if (word.owner.equals(user?.profile._id)) { %>
+    
+  <% } %>
+</section>
+
+<form 
+    id="add-comment-form"
+    action="/words/<%= word._id %>/comments"
+    method="POST"
+  >
+    <label for="sentence-textarea">Write a sentence using this newly learned slang!:</label>
+    <textarea name="sentence" id="sentence-textarea"></textarea>
+    <button type="submit">Add Sentence</button>
+  </form>
+
+	<% if (word.comments.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Comment</th>
+					<th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% word.comments.forEach(function(comment) { %>
+          <tr>
+            <td><%= comment.createdAt.toLocaleDateString() %></td>
+            <td><%= comment.sentence %></td>
+            <% if (word.owner.equals(user?.profile._id)) { %>
+              <td>
+                <form action="/words/<%= word._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                  <button>X</button>
+                </form>
+              </td>
+            <% } %>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h3>No Reviews Yet</h3>
+  <% } %>
+
 <%- include('../partials/footer') %>
