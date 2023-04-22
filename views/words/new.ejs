@@ -2,19 +2,21 @@
 <link rel="stylesheet" href="/stylesheets/words/forms.css">
 <%- include('../partials/nav') %>
 
-<h1><%= title %></h1>
-  <form id="new-form" action="/words" method="POST">
-    <label for="slang-input">Word or Phrase:</label>
-    <input type="text" name="slang" id="slang-input">
-    <label for="definitions0-input">Correct Definition:</label>
-    <input type="text" name="definitions" id="definitions0-input">
-    <label for="definitions1-input">Wrong Definition #1:</label>
-    <input type="text" name="definitions" id="definitions1-input">
-    <label for="definitions2-input">Wrong Definition #2:</label>
-    <input type="text" name="definitions" id="definitions2-input">
-    <label for="definitions3-input">Wrong Definition #3:</label>
-    <input type="text" name="definitions" id="definitions3-input">
-    <button type="submit">Shoot that Slang!</button>
-  </form>
+<main>
+  <h1><%= title %></h1>
+    <form id="new-form" action="/words" method="POST">
+      <label for="slang-input">Word or Phrase:</label>
+      <input type="text" name="slang" id="slang-input">
+      <label for="definitions0-input">Correct Definition:</label>
+      <input type="text" name="definitions" id="definitions0-input">
+      <label for="definitions1-input">Wrong Definition #1:</label>
+      <input type="text" name="definitions" id="definitions1-input">
+      <label for="definitions2-input">Wrong Definition #2:</label>
+      <input type="text" name="definitions" id="definitions2-input">
+      <label for="definitions3-input">Wrong Definition #3:</label>
+      <input type="text" name="definitions" id="definitions3-input">
+      <button type="submit">Shoot that Slang!</button>
+    </form>
+</main>
 
 <%- include('../partials/footer') %>

@@ -1,5 +1,5 @@
 import { Word } from '../models/word.js'
-
+import { db } from '../config/database.js'
 function newWord(req, res) {
   res.render('words/new', {
     title: "Add Word",
@@ -123,6 +123,13 @@ function deleteComment(req, res) {
   })
 }
 
+function random(req, res) {
+  let numGen = Math.floor(Math.random()*4)
+  let questionOrder = [[0,1,2,3], [1,2,3,0], [2,3,0,1], [3,0,1,2]]
+  let randWord =Word.aggregate([{ $sample: { size: 1 } }])
+  //db.words.aggregate([{ $sample: { size: 1 } }])
+}
+
 export {
   newWord as new,
   index,
@@ -133,4 +140,5 @@ export {
   createComment,
   deleteComment,
   update,
+  random,
 }

@@ -5,12 +5,45 @@ h1 {
 
 table {
   text-align: center;
-  width: 80%;
+  width: 100%;
   margin: 0 auto
 }
 
 td {
   padding: 2vh 0;
-  color: green;
-  background-color: black;
+  color: black;
+  background-color: white;
+  border: solid black;
+}
+
+#comments {
+  border-style: none;
+}
+
+#def-0, #def1, #def2, #def3 {
+  width: 50%;
+}
+
+#def-0.chosen {
+  background-color: green;
+  color: white;
+}
+
+#def-1.chosen, #def-2.chosen, #def-3.chosen {
+  background-color: red;
+  color: white;
+}
+
+#edit-button, #delete-button {
+  margin-left: auto;
+  width: 25vh;
+}
+
+#show-btn {
+  background-color: rgb(252, 107, 148);
+  color: #000000;
+  width: 25vh;
+}
+#add-comment-form {
+  margin: 5vh 0 0 0;
 }

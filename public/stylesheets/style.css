@@ -13,7 +13,7 @@ html {
 
 body {
   background-color: #1a1a1a;
-  color: #f6f6f6;
+  color: #000000;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
@@ -21,30 +21,70 @@ body {
 }
 
 nav {
-  background-color: #f6f6f6;
+  background-color: #4e4c4c;
   color: #1a1a1a;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 0 10px;
   min-height: 60px;
 }
 
 #nav-buttons {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
 }
 
+#nav-button {
+  border: 5px outset rgb(38, 57, 77);
+  padding: 1vh;
+  background-color: rgb(53,79,107) ;
+  min-height: 60px;
+  line-height: 35px;
+  text-align: center;
+}
+
+a {
+  color: rgb(213, 213, 213);
+  text-decoration: none;
+}
+
+#slangshot {
+  font-family: 'Bruno Ace SC', cursive;
+  font-size: 28px;
+  color: rgb(255, 253, 253);
+  text-decoration: none;
+}
+
+#list-word {
+  color: black;
+}
 
 main {
   display: flex;
   align-items: center;
-  background-color: rgb(255, 255, 255, .3);
+  background-color: rgb(255, 255, 255, .8);
   justify-content: center;
   flex-direction: column;
-  padding: 0 5vh;
-  margin: 0 10vh;
+  padding: 0 5vh 5vh;
+  margin: 5vh auto;
+  overflow-wrap: normal;
+  width: 150vh;
 }
 
+
 .right {
-  margin-left: auto;
+  border: 5px outset rgb(7, 0, 99);
+  padding: 1vh;
+  background-color: rgb(64, 71, 197);
+  min-height: 60px;
+  line-height: 35px;
+  text-align: center;
+}
+
+p {
+  text-indent: 5vh;
+  text
 }

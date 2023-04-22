@@ -1,21 +1,23 @@
 <%- include('../partials/html-head') %>
-
+<link rel="stylesheet" href="/stylesheets/words/forms.css">
 <%- include('../partials/nav') %>
 <% if (word.owner.equals(user?.profile._id)) { %>
-  <h1><%= title %></h1>
-  <form id="new-form" action="/words/<%= word.id %>?_method=PUT" method="POST">
-    <label for="slang-input">Word or Phrase:</label>
-    <input type="text" name="slang" id="slang-input" value="<%= word.slang %>">
-    <label for="definitions0-input">Correct Definition:</label>
-    <input type="text" name="definitions" id="definitions0-input" value="<%= word.definitions[0] %>">
-    <label for="definitions1-input">Wrong Definition #1:</label>
-    <input type="text" name="definitions" id="definitions1-input" value="<%= word.definitions[1] %>">
-    <label for="definitions2-input">Wrong Definition #2:</label>
-    <input type="text" name="definitions" id="definitions2-input" value="<%= word.definitions[2] %>">
-    <label for="definitions3-input">Wrong Definition #3:</label>
-    <input type="text" name="definitions" id="definitions3-input" value="<%= word.definitions[3] %>">
-    <button type="submit">Correct yo self before...</button>
-  </form>
+  <main>
+    <h1><%= title %></h1>
+    <form id="new-form" action="/words/<%= word.id %>?_method=PUT" method="POST">
+      <label for="slang-input">Word or Phrase:</label>
+      <input type="text" name="slang" id="slang-input" value="<%= word.slang %>">
+      <label for="definitions0-input">Correct Definition:</label>
+      <input type="text" name="definitions" id="definitions0-input" value="<%= word.definitions[0] %>">
+      <label for="definitions1-input">Wrong Definition #1:</label>
+      <input type="text" name="definitions" id="definitions1-input" value="<%= word.definitions[1] %>">
+      <label for="definitions2-input">Wrong Definition #2:</label>
+      <input type="text" name="definitions" id="definitions2-input" value="<%= word.definitions[2] %>">
+      <label for="definitions3-input">Wrong Definition #3:</label>
+      <input type="text" name="definitions" id="definitions3-input" value="<%= word.definitions[3] %>">
+      <button type="submit">Correct yo self before...</button>
+    </form>
+  </main>
 
   <% } %>
 <%- include('../partials/footer') %>
