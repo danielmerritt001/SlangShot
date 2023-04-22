@@ -1,5 +1,6 @@
 <%- include('../partials/html-head') %>
-
+<link rel="stylesheet" href="/stylesheets/words/show.css">
+<script defer src="/words/show.js"></script>
 <%- include('../partials/nav') %>
 
 <section>
@@ -15,12 +16,20 @@
   <h1><%= word.slang %></h1>
   <table>
     <tr>
-      <td><%= word.definitions[0] %></td>
-      <td><%= word.definitions[1] %></td>
+      <td id="def-<%= questionOrder[numGen][0] %>">
+        <%= word.definitions[questionOrder[numGen][0]] %>
+      </td>
+      <td id="def-<%= questionOrder[numGen][1] %>">
+        <%= word.definitions[questionOrder[numGen][1]] %>
+      </td>
     </tr>
     <tr>
-      <td><%= word.definitions[2] %></td>
-      <td><%= word.definitions[3] %></td>
+      <td id="def-<%= questionOrder[numGen][2] %>">
+        <%= word.definitions[questionOrder[numGen][2]] %>
+      </td>
+      <td id="def-<%= questionOrder[numGen][3] %>">
+        <%= word.definitions[questionOrder[numGen][3]] %>
+      </td>
     </tr>
   </table>
 </section>

@@ -67,12 +67,16 @@ function deleteWord(req, res) {
 }
 
 function show(req, res) {
+  let numGen = Math.floor(Math.random()*4)
+  let questionOrder = [[0,1,2,3], [1,2,3,0], [2,3,0,1], [3,0,1,2]]
   Word.findById(req.params.wordId)
   .populate('owner')
   .then(word => {
     res.render('words/show', {
       word,
-      title: "Word Show"
+      title: "Word Show",
+      numGen: numGen,
+      questionOrder: questionOrder
     })
   })
   .catch(err => {
