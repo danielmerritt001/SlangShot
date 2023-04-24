@@ -12,10 +12,10 @@
   </ul>
   <h1>My Words</h1>
     <% words.forEach(word => { %>
-      
+      <% if (word.owner.equals(user?.profile._id)) { %>
       <li><a href="/words/<%= word._id %>" id="list-word"><%= word.slang %></a>
       </li>
-
+      <% } %>
     <% }) %>
   </ul>
 </main>
