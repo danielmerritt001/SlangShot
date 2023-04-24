@@ -6,7 +6,7 @@ const router = Router()
 
 router.get('/', isLoggedIn, wordsCtrl.index)
 router.get('/new', isLoggedIn, wordsCtrl.new)
-router.get('/random', wordsCtrl.random)
+router.get('/random', isLoggedIn, wordsCtrl.random)
 router.get('/:wordId', isLoggedIn, wordsCtrl.show)
 router.get('/:wordId/edit', isLoggedIn, wordsCtrl.edit)
 router.post('/', isLoggedIn, wordsCtrl.create)

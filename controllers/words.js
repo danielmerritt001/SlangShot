@@ -126,8 +126,19 @@ function deleteComment(req, res) {
 function random(req, res) {
   let numGen = Math.floor(Math.random()*4)
   let questionOrder = [[0,1,2,3], [1,2,3,0], [2,3,0,1], [3,0,1,2]]
-  console.log(Word)
-  //db.words.aggregate([{ $sample: { size: 1 } }])
+  Word.find({})
+  .then(words => {
+    let randWord = Math.floor(Math.random()*words.length)
+    words[randWord].populate('owner')
+    .then (word => {
+      res.render('words/show', {
+        word: words[randWord],
+        title: 'Word Show',
+        numGen: numGen,
+        questionOrder: questionOrder,
+    })
+    })
+  })
 }
 
 export {
