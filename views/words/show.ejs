@@ -37,9 +37,9 @@
       action="/words/<%= word._id %>/comments"
       method="POST"
     >
-      <label for="sentence-textarea">Write a sentence using this newly learned slang!:</label>
-      <textarea name="sentence" id="sentence-textarea"></textarea>
-      <button type="submit" id="show-btn">Add Sentence</button>
+      <label for="sentence-textarea" id>Write a sentence using this newly learned slang!:</label>
+      <input type="text" name='sentence' id="sentence-textarea">
+      <button type="submit" id="show-btn" class="add-sentence">Add Sentence</button>
     </form>
   
     <% if (word.comments.length) { %>

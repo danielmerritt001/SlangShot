@@ -16,4 +16,7 @@ form > button {
   width: 160px;
   margin-left: auto;
   font-size: 22px;
+  background-color: rgb(252, 107, 148, .6);
+  border: outset rgb(252, 107, 148);
+  border-radius: 25px;
 }

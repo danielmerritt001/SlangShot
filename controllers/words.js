@@ -126,7 +126,7 @@ function deleteComment(req, res) {
 function random(req, res) {
   let numGen = Math.floor(Math.random()*4)
   let questionOrder = [[0,1,2,3], [1,2,3,0], [2,3,0,1], [3,0,1,2]]
-  let randWord =Word.aggregate([{ $sample: { size: 1 } }])
+  console.log(Word)
   //db.words.aggregate([{ $sample: { size: 1 } }])
 }
 
