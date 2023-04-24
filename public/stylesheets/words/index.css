@@ -4,14 +4,21 @@
   background-color: rgb(255, 255, 255, .8);
   justify-content: space-around;
   padding: 0 5vh 5vh;
-  margin: 5vh;
+  margin: 5vh auto;
   max-width: 150vh;
+  font-family: 'Bitter', serif;
 }
 #guessed-words, #my-words {
   width: 50%;
   border: groove rgb(0, 0, 0, .6);
   margin-top: 5vh;
+  background-color: rgba(80, 134, 200, 0.5);
 }
 h2 {
   text-align: center;
+}
+
+li {
+  font-weight: 600;
+
 }
