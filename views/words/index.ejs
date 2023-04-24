@@ -1,23 +1,30 @@
 <%- include('../partials/html-head') %>
-
+<link rel="stylesheet" href="/stylesheets/words/index.css">
 <%- include('../partials/nav') %>
 
-<main>
-  <h1>WORDS YOU'VE GUESSED</h1>
-    <% words.forEach(word => { %>
-      <li><a href="/words/<%= word._id %>" id="list-word"><%= word.slang %></a>
-      </li>
-
-    <% }) %>
-  </ul>
-  <h1>My Words</h1>
-    <% words.forEach(word => { %>
-      <% if (word.owner.equals(user?.profile._id)) { %>
-      <li><a href="/words/<%= word._id %>" id="list-word"><%= word.slang %></a>
-      </li>
-      <% } %>
-    <% }) %>
-  </ul>
-</main>
+<div id="index-main">
+  <div id="guessed-words">
+    <h2>Slang you Saw</h1>
+    <ol>
+      <% words.forEach(word => { %>
+        <% if (word.guessed.some(guess => guess.toString() == user?.profile._id)) { %>
+        <li><a href="/words/<%= word._id %>" id="list-word"><%= word.slang %></a>
+        </li>
+        <% } %>
+      <% }) %>
+    </ol>
+  </div>
+  <div id="my-words">
+    <h2>Slang you Shot</h1>
+    <ol>
+      <% words.forEach(word => { %>
+        <% if (word.owner.equals(user?.profile._id)) { %>
+        <li><a href="/words/<%= word._id %>" id="list-word"><%= word.slang %></a>
+        </li>
+        <% } %>
+      <% }) %>
+    </ol>
+  </div>
+</div>
 
 <%- include('../partials/footer') %>

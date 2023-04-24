@@ -1,0 +1,17 @@
+#index-main {
+  display: flex;
+  flex-direction: rows;
+  background-color: rgb(255, 255, 255, .8);
+  justify-content: space-around;
+  padding: 0 5vh 5vh;
+  margin: 5vh;
+  max-width: 150vh;
+}
+#guessed-words, #my-words {
+  width: 50%;
+  border: groove rgb(0, 0, 0, .6);
+  margin-top: 5vh;
+}
+h2 {
+  text-align: center;
+}
