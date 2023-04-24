@@ -58,7 +58,7 @@ function update(req, res) {
 function deleteWord(req, res) {
   Word.findByIdAndDelete(req.params.wordId)
   .then(word => {
-    res.redirect('/')
+    res.redirect('/words')
   })
   .catch(err => {
     console.log(err)
@@ -129,13 +129,21 @@ function random(req, res) {
   Word.find({})
   .then(words => {
     let randWord = Math.floor(Math.random()*words.length)
-    words[randWord].populate('owner')
-    .then (word => {
-      res.render('words/show', {
-        word: words[randWord],
-        title: 'Word Show',
-        numGen: numGen,
-        questionOrder: questionOrder,
+    if(words[randWord].guessed.every(function(guesser) {
+      return guesser.toString() != req.user.profile._id
+    })) {
+      words[randWord].guessed.push(req.user.profile._id)
+    } 
+    words[randWord].save()
+    .then(empty => {
+      words[randWord].populate('owner')
+      .then (word => {
+        res.render('words/show', {
+          word: words[randWord],
+          title: 'Word Show',
+          numGen: numGen,
+          questionOrder: questionOrder,
+      })
     })
     })
   })

@@ -13,7 +13,8 @@ const wordSchema = new Schema({
   slang: String,
   definitions: Array,
   owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
-  comments: [commentSchema]
+  comments: [commentSchema],
+  guessed: Array,
 }, {
   timestamps: true,
 })

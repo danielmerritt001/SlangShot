@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>WORDS UP</h1>
+  <h1>WORDS YOU'VE GUESSED</h1>
     <% words.forEach(word => { %>
       <li><a href="/words/<%= word._id %>" id="list-word"><%= word.slang %></a>
       </li>
