@@ -9,7 +9,6 @@ html {
 }
 
 body {
-  background-color: #1a1a1a;
   color: #000000;
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
@@ -42,9 +41,14 @@ nav {
   text-align: center;
 }
 
+#nav-button:hover {
+  border: 5px inset rgb(38, 57, 77);
+}
+
 a {
   color: rgb(213, 213, 213);
   text-decoration: none;
+  border: hidden;
 }
 
 #slangshot {
@@ -52,6 +56,10 @@ a {
   font-size: 28px;
   color: rgb(255, 253, 253);
   text-decoration: none;
+}
+#slangshot:hover {
+  animation: swing;
+  animation-duration: 1s;
 }
 
 #list-word {
@@ -73,9 +81,6 @@ main {
 
 
 .right {
-  border: 5px outset rgb(7, 0, 99);
-  padding: 1vh;
-  background-color: rgb(64, 71, 197);
   min-height: 60px;
   line-height: 35px;
   text-align: center;
@@ -89,8 +94,8 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2vh;
-  background-color: rgb(253, 253, 253, .7);
+  padding: 2vh 5vh;
+  background-color: rgb(253, 253, 253, .5);
   border: groove rgb(0, 0, 0, .5);
 }
 

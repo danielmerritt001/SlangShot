@@ -1,3 +1,7 @@
+body {
+  background-image: url('/assets/backgrounds/earth-show.jpg');
+  background-size: cover;
+}
 
 h1 {
   text-align: center;
@@ -30,6 +34,8 @@ td {
 
 #def-0:hover, #def-1:hover, #def-2:hover, #def-3:hover{
   background-color: yellow;
+  animation: pulse;
+  animation-duration: 1s;
 }
 
 #def-0, #def1, #def2, #def3 {
@@ -39,11 +45,15 @@ td {
 #def-0.chosen {
   background-color: green;
   color: white;
+  animation: bounce;
+  animation-duration: 1s;
 }
 
 #def-1.chosen, #def-2.chosen, #def-3.chosen {
   background-color: red;
   color: white;
+  animation: shakeX;
+  animation-duration: 1s;
 }
 
 #edit-button, #delete-button {
@@ -58,6 +68,11 @@ td {
   border-radius: 25px;
   border: outset rgb(252, 107, 148, .5);
 }
+
+#show-btn:hover {
+  border: inset rgb(252, 107, 148, .5);
+}
+
 #add-comment-form {
   display: flex;
   flex-direction: column;
