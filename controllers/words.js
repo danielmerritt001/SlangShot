@@ -42,6 +42,10 @@ function edit(req, res) {
       title: "Edit Slang"
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 function update(req, res) {
@@ -143,8 +147,12 @@ function random(req, res) {
           title: 'Word Show',
           numGen: numGen,
           questionOrder: questionOrder,
+        })
       })
-    })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/')
+      })
     })
   })
 }

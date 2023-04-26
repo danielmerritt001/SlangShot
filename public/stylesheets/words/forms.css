@@ -1,5 +1,5 @@
 body {
-  background-image: url('/assets/backgrounds/earth-add.jpg');
+  background-image: url('/assets/images/backgrounds/earth-add.jpg');
   background-size: cover;
 }
 
@@ -24,4 +24,8 @@ form > button {
   background-color: rgb(252, 107, 148, .6);
   border: outset rgb(252, 107, 148);
   border-radius: 25px;
+}
+
+form > button:hover {
+  border: inset rgb(252, 107, 148);
 }
