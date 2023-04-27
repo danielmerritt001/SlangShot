@@ -57,9 +57,9 @@
               <td id="comments"><%= comment.createdAt.toLocaleDateString() %></td>
               <td id="comments"><%= comment.sentence %></td>
               <% if (word.owner.equals(user?.profile._id)) { %>
-                <td id="comments">
+                <td id="comments" class="delete-comments">
                   <form action="/words/<%= word._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                    <button>X</button>
+                    <button id="delete-comment">X</button>
                   </form>
                 </td>
               <% } %>

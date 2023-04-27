@@ -14,7 +14,7 @@ table {
 }
 
 td {
-  padding: 2vh 0;
+  padding: 2vh;
   color: black;
   background-color: rgb(255, 255, 255, .9);
   border: groove gray;
@@ -80,4 +80,14 @@ td {
   align-content: center;
   align-items: center;
   justify-content: center;
+}
+
+#delete-comment {
+  width: 100%;
+  border-radius: 25px;
+  background-color: rgb(252, 107, 148, .5);
+}
+
+#delete-comment:hover {
+  background-color: rgb(252, 107, 148, .3);
 }

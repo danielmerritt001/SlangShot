@@ -24,7 +24,7 @@ function guess() {
 }
 function playLossSound() {
   randNum= Math.floor(Math.random()*lossArray.length)
-  lossArray[randNum].volume = .8
+  lossArray[randNum].volume = .7
   lossArray[randNum].play()
 }
 

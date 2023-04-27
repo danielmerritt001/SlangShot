@@ -6,7 +6,7 @@ Growing up in a diverse neighborhood in New Orleans, I always loved hearing the 
 
 As I grew older, I realized that I commonly used phrases and words that confounded my college classmates. After all, if you're not from the Bayou, how would you know "Oh, they're from North of the I-10" meant they season their crawfish after they boil it?
 
-This app is an educational tool for me and others to learn about the different dictionaries that English speakers use. Sign in and click "guess," and you'll be able to learn from another user's culture. Once you get a hang of it, please add your own words in order teach others your unique verbiage!
+This app is an educational tool for me and others to learn about the different dictionaries that English speakers use. Sign in and click "guess," and you'll be able to learn from another user's culture. Once you get a hang of it, please add your own words in order to teach others your unique verbiage!
 
 ## Attributions
 
