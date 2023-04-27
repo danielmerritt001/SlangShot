@@ -2,13 +2,15 @@
 ### [Sling you Slang Here!](https://slangshot.fly.dev/)
 <img width="1440" alt="Screenshot of SlangShot" src="public/assets/images/screenshot.png">
 
-Growing up in a diverse neighborhood in New Orleans, I loved hearing the different ways people talked. My favorite part was learning the different words different families used. 
+Growing up in a diverse neighborhood in New Orleans, I always loved hearing the different ways my neighbors talked. My favorite part was learning the different words different families used. 
 
-As I grew older, I realized that there were phrases and words that confounded my college classmates. After all, if you're not from the Bayou, how would you know "Oh, there from North of the I-10" meant they season their crawfish after they boil it.
+As I grew older, I realized that I commonly used phrases and words that confounded my college classmates. After all, if you're not from the Bayou, how would you know "Oh, they're from North of the I-10" meant they season their crawfish after they boil it?
 
-This is an educational tool for me and others to learn about the different dictionaries that English speakers use. Sign in and click guess, and you'll be able to learn from another user's culture. Once you get a hang of it, please add your own words in order teach others your unique verbiage!
+This app is an educational tool for me and others to learn about the different dictionaries that English speakers use. Sign in and click "guess," and you'll be able to learn from another user's culture. Once you get a hang of it, please add your own words in order teach others your unique verbiage!
 
 ## Attributions
+
+[Animate.CSS](animate.style)
 
 Slingshot favicon by [icons8](https://icons8.com/icons/set/slingshot)
 
@@ -21,13 +23,14 @@ Backgrounds by <a href="https://unsplash.com/pt-br/@lanirudhreddy?utm_source=uns
 ## Technologies Used
 - Mongoose
 - Express
-- Node
+- Node.js
 - MongoDB
 - Google OAuth
 - Fly.io
 - JavaScript
 - EJS
 - CSS
+- Git
 
 ## Ice Box
 - [ ] Filter slang by regions.
