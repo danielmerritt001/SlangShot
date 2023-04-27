@@ -3,16 +3,21 @@
 <script defer src="/scripts/words/show.js"></script>
 <%- include('../partials/nav') %>
 <main>
-  <% if (word.owner.equals(user?.profile._id)) { %>
-    <a href="/words/<%= word._id %>/edit" id="edit-button">
-      <button id="show-btn">Edit the Slang</button>
-    </a>
-    <form action="/words/<%= word._id %>?_method=DELETE" method="POST" id="delete-button">
-      <button type="submit" id="show-btn">Delete the Slang</button>
-    </form>
-  <% } %>
-  <h3><%= word.owner.name %> wants to know if you heard of...</h3>
-  <h1><%= word.slang %></h1>
+  <div id="header">
+    <h3><%= word.owner.name %> wants to know if you heard of...</h3>
+    <div>
+      <% if (word.owner.equals(user?.profile._id)) { %>
+        <a href="/words/<%= word._id %>/edit" id="edit-button">
+          <button id="show-btn">Edit the Slang</button>
+        </a>
+        <form action="/words/<%= word._id %>?_method=DELETE" method="POST" id="delete-button">
+          <button type="submit" id="show-btn">Delete the Slang</button>
+        </form>
+      <% } %>
+    </div>
+  </div>
+  <h1><%= word.slang %>:</h1>
+  <div>(make your guess below)</div>
   <table id="definitions">
     <tr>
       <td id="def-<%= questionOrder[numGen][0] %>">
