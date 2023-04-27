@@ -1,6 +1,6 @@
 body {
   background-image: url('/assets/images/backgrounds/earth-show.jpg');
-  background-size: cover;
+  height: 100%;
 }
 
 h1 {

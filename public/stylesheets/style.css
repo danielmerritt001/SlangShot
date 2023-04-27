@@ -39,6 +39,7 @@ nav {
   min-height: 60px;
   line-height: 35px;
   text-align: center;
+  margin: auto;
 }
 
 #nav-button:hover {
@@ -81,10 +82,10 @@ main {
 
 
 .right {
-  min-height: 60px;
-  line-height: 35px;
   text-align: center;
+  margin: auto auto auto 1vh;
 }
+
 
 p {
   text-indent: 5vh;
