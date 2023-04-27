@@ -4,14 +4,6 @@
 
 <main>
   <h1>Where you from, <%= user ? user.profile.name : "stranger" %>?</h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-  <% } %>
   <div id="intro">
     <p>
       The English language has evolved and mutated over the years as people have found ways to put their stamp on the language. Whether the person of your contempt is a "jive-ass turkey" or a "mook," we all have a slightly different way of communicating the same ideas.
