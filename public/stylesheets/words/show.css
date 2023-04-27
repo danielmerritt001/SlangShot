@@ -9,7 +9,7 @@ body {
   justify-content: space-between;
 }
 
-h3 {
+#wants-to-know {
   align-self: flex-start;
 }
 
@@ -79,14 +79,20 @@ td {
   border: outset rgb(252, 107, 148, .5);
 }
 
-#show-btn:hover {
+.add-sentence {
+  background-color: rgb(252, 107, 148, .6);
+  color: #000000;
+  font-size: 18px;
+  border: outset rgb(252, 107, 148, .5);
+}
+#show-btn:hover, .add-sentence:hover {
   border: inset rgb(252, 107, 148, .5);
 }
 
 #add-comment-form {
   display: flex;
   flex-direction: column;
-  margin: 5vh auto 0;
+  margin: 5vh auto;
   align-content: center;
   align-items: center;
   justify-content: center;
@@ -97,7 +103,7 @@ td {
 }
 
 #delete-comment {
-  width: 100%;
+  width: 5vh;
   border-radius: 25px;
   background-color: rgb(252, 107, 148, .5);
 }
@@ -105,3 +111,4 @@ td {
 #delete-comment:hover {
   background-color: rgb(252, 107, 148, .3);
 }
+

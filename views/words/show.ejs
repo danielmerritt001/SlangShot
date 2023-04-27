@@ -4,7 +4,7 @@
 <%- include('../partials/nav') %>
 <main>
   <div id="header">
-    <h3><%= word.owner.name %> wants to know if you heard of...</h3>
+    <h3 id="wants-to-know"><%= word.owner.name %> wants to know if you heard of...</h3>
     <div>
       <% if (word.owner.equals(user?.profile._id)) { %>
         <a href="/words/<%= word._id %>/edit" id="edit-button">
@@ -44,11 +44,11 @@
     >
       <label for="sentence-textarea" id>Write a sentence using this newly learned slang!:</label>
       <input type="text" name='sentence' id="sentence-textarea">
-      <button type="submit" id="show-btn" class="add-sentence">Add Sentence</button>
+      <button type="submit" class="add-sentence">Add Sentence</button>
     </form>
   
     <% if (word.comments.length) { %>
-      <table>
+      <table id="comment-table">
         <thead>
           <tr>
             <th>Date</th>
