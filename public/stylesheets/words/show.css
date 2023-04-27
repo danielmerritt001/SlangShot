@@ -92,6 +92,10 @@ td {
   justify-content: center;
 }
 
+#comments.delete-comments {
+  background: none;
+}
+
 #delete-comment {
   width: 100%;
   border-radius: 25px;

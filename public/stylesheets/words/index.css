@@ -28,7 +28,7 @@ li {
 }
 
 #list-word:hover{
-  color: rgb(250, 210, 222);
+  color: rgb(242, 208, 218);
 }
 
 @media only screen and (min-width: 160vh) {

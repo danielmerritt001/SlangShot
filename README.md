@@ -12,6 +12,8 @@ As I grew older, I realized that I commonly used phrases and words that confound
 
 This app is an educational tool for me and others to learn about the different dictionaries that English speakers use. Sign in and click "guess," and you'll be able to learn from another user's culture. Once you get a hang of it, please add your own words in order to teach others your unique verbiage!
 
+Wanna see how the sausage was made? Here's a link to my [Trelle](https://trello.com/b/KnZRmHVm/slangshot-the-local-lexicon-with-a-global-audience) 
+
 ## Attributions
 
 [Animate.CSS](animate.style)
