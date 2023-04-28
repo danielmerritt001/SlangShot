@@ -1,5 +1,5 @@
 # SlangShot: The Local Lexicon with a Global Audience.
-### [Sling you Slang Here!](https://slangshot.fly.dev/)
+### [Sling your Slang Here!](https://slangshot.fly.dev/)
 <img width="1440" alt="Screenshot of SlangShot" src="public/assets/images/screenshot.png">
 
 >"Language is not a genetic gift, it is a social gift. Learning a new language is becoming a member of the club – the community of speakers of that language." — *Frank Smith*
